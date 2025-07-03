@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ficha Técnica del Membrillo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      background: #f4f4f9;
+      color: #333;
+    }
+    header {
+      background-color: #a87f1e;
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+    main {
+      padding: 1.2rem;
+    }
+    section {
+      max-width: 800px;
+      margin: auto;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+    .card-header {
+      background: #f0e3c0;
+      padding: 1rem;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      justify-content: space-between;
+      font-size: 1rem;
+    }
+    .card-header i {
+      color: #a87f1e;
+      margin-right: 10px;
+    }
+    .card-content {
+      padding: 1rem;
+      display: none;
+      animation: fadeIn 0.3s ease-in-out;
+      font-size: 0.95rem;
+    }
+    .active .card-content {
+      display: block;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    button.toggle-btn {
+      all: unset;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1rem 0;
+      font-size: 0.85rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1><i class="fas fa-leaf"></i> Ficha Técnica del Cultivo de Membrillo</h1>
+  </header>
+  <main>
+    <section>
+      <div class="card">
+        <div class="card-header" onclick="toggleCard(this)">
+          <button class="toggle-btn"><span><i class="fas fa-mountain"></i> Requerimientos Edafoclimáticos</span><i class="fas fa-chevron-down"></i></button>
+        </div>
+        <div class="card-content">
+          Altitud: 1,500–2,800 m s.n.m.<br>
+          Temperatura: 12–22 °C.<br>
+          Precipitación: 600–1,200 mm/año.<br>
+          Suelo: franco, bien drenado, pH 6.0–7.5.<br>
+          Radiación solar mínima: 6 h/día.
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header" onclick="toggleCard(this)">
+          <button class="toggle-btn"><span><i class="fas fa-seedling"></i> Propagación</span><i class="fas fa-chevron-down"></i></button>
+        </div>
+        <div class="card-content">
+          Se propaga principalmente por injertos y estacas. Las semillas se utilizan para portainjertos debido a su variabilidad genética.
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header" onclick="toggleCard(this)">
+          <button class="toggle-btn"><span><i class="fas fa-tractor"></i> Manejo Agronómico</span><i class="fas fa-chevron-down"></i></button>
+        </div>
+        <div class="card-content">
+          Incluye subsolado, arado y rastra. Plantación con marco de 4x3 m. Poda de formación, fertilización balanceada y riego complementario.
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header" onclick="toggleCard(this)">
+          <button class="toggle-btn"><span><i class="fas fa-bug"></i> Sanidad Vegetal</span><i class="fas fa-chevron-down"></i></button>
+        </div>
+        <div class="card-content">
+          Aplicar MIPE para controlar plagas como Cydia pomonella y enfermedades como moniliosis y roya. Priorizar prácticas preventivas y monitoreo constante.
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header" onclick="toggleCard(this)">
+          <button class="toggle-btn"><span><i class="fas fa-apple-alt"></i> Cosecha y Poscosecha</span><i class="fas fa-chevron-down"></i></button>
+        </div>
+        <div class="card-content">
+          Cosecha entre abril y junio. Manipular con cuidado. Almacenar a 10–12 °C y 85 % HR. Duración: 4–6 semanas. Usar bandejas alveolares.
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header" onclick="toggleCard(this)">
+          <button class="toggle-btn"><span><i class="fas fa-box"></i> Usos y Valor</span><i class="fas fa-chevron-down"></i></button>
+        </div>
+        <div class="card-content">
+          Usado para dulces, jaleas, néctares y harinas. Alto en pectinas y fibra. Aporta valor a la agroindustria y a la agricultura familiar.
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    &copy; 2025 Ficha técnica interactiva - Desarrollada por Iván
+  </footer>
+
+  <script>
+    function toggleCard(element) {
+      const card = element.parentElement;
+      card.classList.toggle("active");
+    }
+  </script>
+</body>
+</html>
